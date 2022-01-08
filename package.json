@@ -47,6 +47,14 @@
     },
     "rules": {}
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 70,
+    "tabWidth": 2,
+    "parser": "typescript"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

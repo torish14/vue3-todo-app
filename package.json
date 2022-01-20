@@ -33,18 +33,21 @@
   "eslintConfig": {
     "root": true,
     "env": {
+      "browser": true,
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/vue3-recommended",
       "eslint:recommended",
-      "@vue/typescript/recommended",
-      "@vue/prettier",
-      "@vue/prettier/@typescript-eslint"
+      "@vue/typescript/recommended"
     ],
     "parserOptions": {
-      "ecmaVersion": 2020
+      "ecmaVersion":  12
     },
+    "plugins": [
+      "vue",
+      "@typescript-eslint"
+    ],
     "rules": {}
   },
   "prettier": {
@@ -52,8 +55,7 @@
     "singleQuote": true,
     "trailingComma": "all",
     "printWidth": 70,
-    "tabWidth": 2,
-    "parser": "typescript"
+    "tabWidth": 2
   },
   "browserslist": [
     "> 1%",

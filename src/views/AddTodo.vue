@@ -1,30 +1,50 @@
 <template>
-	<h2>Todo を作成する</h2>
-	<!-- フォームがサブミットされたときに onSubmit を呼び出す -->
-	<form @submit.prevent="onSubmit">
-		<div>
-			<label for="title">タイトル</label>
-			<!-- v-model でバインディング -->
-			<input type="text" id="title" v-model="data.title">
-		</div>
-		<div>
-			<label for="description">説明</label>
-			<!-- v-model でバインディング -->
-			<textarea id="description" v-model="data.description"></textarea>
-		</div>
-		<div>
-			<label for="status">ステータス</label>
-			<!-- v-model でバインディング -->
-			<select id="status" v-model="data.status">
-				<option value="waiting">waiting</option>
-				<option value="working">working</option>
-				<option value="completed">completed</option>
-				<option value="pending">pending</option>
-			</select>
-		</div>
-		<!-- フォームがサブミットされたときに onSubmit を呼び出す -->
-		<button @click="onSubmit">作成する</button>
-	</form>
+  <h2>Todo を作成する</h2>
+  <!-- フォームがサブミットされたときに onSubmit を呼び出す -->
+  <form @submit.prevent="onSubmit">
+    <div>
+      <label for="title">タイトル</label>
+      <!-- v-model でバインディング -->
+      <input
+        id="title"
+        v-model="data.title"
+        type="text"
+      >
+    </div>
+    <div>
+      <label for="description">説明</label>
+      <!-- v-model でバインディング -->
+      <textarea
+        id="description"
+        v-model="data.description"
+      />
+    </div>
+    <div>
+      <label for="status">ステータス</label>
+      <!-- v-model でバインディング -->
+      <select
+        id="status"
+        v-model="data.status"
+      >
+        <option value="waiting">
+          waiting
+        </option>
+        <option value="working">
+          working
+        </option>
+        <option value="completed">
+          completed
+        </option>
+        <option value="pending">
+          pending
+        </option>
+      </select>
+    </div>
+    <!-- フォームがサブミットされたときに onSubmit を呼び出す -->
+    <button @click="onSubmit">
+      作成する
+    </button>
+  </form>
 </template>
 
 <script lang="ts">

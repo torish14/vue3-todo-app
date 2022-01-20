@@ -1,23 +1,23 @@
 <template>
-	<div>
-		<h2>
-			Todo 一覧です
-		</h2>
-		<ul>
-			<TodoItem
-				v-for="todo in todoStore.state.todos"
-				:key="todo.id"
-				:todo="todo"
-				@click-title="clickTitle"
-				@click-delete="clickDelete"
-			>
-				{{ todo.title }}
-			</TodoItem>
-		</ul>
-		<router-link to="/new">
-			新規作成
-		</router-link>
-	</div>
+  <div>
+    <h2>
+      Todo 一覧です
+    </h2>
+    <ul>
+      <TodoItem
+        v-for="todo in todoStore.state.todos"
+        :key="todo.id"
+        :todo="todo"
+        @click-title="clickTitle"
+        @click-delete="clickDelete"
+      >
+        {{ todo.title }}
+      </TodoItem>
+    </ul>
+    <router-link to="/new">
+      新規作成
+    </router-link>
+  </div>
 </template>
 
 <script lang="ts">

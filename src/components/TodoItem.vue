@@ -1,16 +1,26 @@
 <template>
-	<div class="card">
-		<div>
-			<span class="title" @click="clickTitle">{{ todo.title }}</span>
-			<!-- 動的にクラスをバインディング -->
-			<span class="status" :class="todo.status">{{ todo.status }}</span>
-		</div>
-		<div class="body">作成日:{{ formatDate }}</div>
-		<hr>
-		<div class="action">
-			<button @click="clickDelete">削除</button>
-		</div>
-	</div>
+  <div class="card">
+    <div>
+      <span
+        class="title"
+        @click="clickTitle"
+      >{{ todo.title }}</span>
+      <!-- 動的にクラスをバインディング -->
+      <span
+        class="status"
+        :class="todo.status"
+      >{{ todo.status }}</span>
+    </div>
+    <div class="body">
+      作成日:{{ formatDate }}
+    </div>
+    <hr>
+    <div class="action">
+      <button @click="clickDelete">
+        削除
+      </button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

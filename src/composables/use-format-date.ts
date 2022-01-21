@@ -1,6 +1,6 @@
-import { Ref, isRef, ref, computed } from ''
+import { Ref, isRef, ref, computed } from 'vue'
 
-export const useFormatDate = (date: Date | Ref<Date>) => {
+export const useFormatDate = (date: Date | Ref<Date>): unknown => {
   const dateRef = isRef(date) ? date : ref(date)
   return computed(() => {
     return `${dateRef.value.getFullYear()}/${

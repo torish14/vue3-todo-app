@@ -19,7 +19,9 @@ export type Params = Pick<Todo, 'title' | 'description' | 'status'>
 
 export interface TodoStore {
   state: DeepReadonly<TodoState>
-  getTodo: (id: number) => void
+  fetchTodos: () => void
+  fetchTodo: (id: number) => void
+  getTodo: (id: number) => Todo
   addTodo: (todo: Params) => void
   updateTodo: (id: number, todo: Todo) => void
   deleteTodo: (id: number) => void

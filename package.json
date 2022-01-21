@@ -37,18 +37,22 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-recommended",
-      "eslint:recommended",
-      "@vue/typescript/recommended"
+      "plugin:vue/vue3-essential",
+      "@vue/typescript/recommended",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
     ],
     "parserOptions": {
-      "ecmaVersion":  12
+      "ecmaVersion": 2020
     },
     "plugins": [
-      "vue",
-      "@typescript-eslint"
+      "prettier"
     ],
-    "rules": {}
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "off"
+    }
   },
   "prettier": {
     "semi": false,

@@ -33,7 +33,6 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "browser": true,
       "node": true
     },
     "extends": [
@@ -44,6 +43,7 @@
       "plugin:prettier/recommended"
     ],
     "parserOptions": {
+      "parser": "@typescript-eslint/parser",
       "ecmaVersion": 2020
     },
     "plugins": [

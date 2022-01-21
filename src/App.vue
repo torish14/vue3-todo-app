@@ -11,7 +11,7 @@ import TodoStore, { todoKey } from '@/store/todo'
 export default defineComponent({
   name: 'App',
   setup() {
-     provide(todoKey, TodoStore)
+    provide(todoKey, TodoStore)
   },
 })
 </script>
